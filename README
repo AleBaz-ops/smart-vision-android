@@ -1,0 +1,122 @@
+# Smart Vision Android
+Sistema de reconocimiento de imágenes en tiempo real para dispositivos Android usando Pydroid 3.
+
+---
+
+## 1. Introducción
+
+Smart Vision Android es una aplicación desarrollada en Python que permite realizar detección de objetos en tiempo real utilizando la cámara del teléfono móvil. El sistema está diseñado para ejecutarse en entornos Android mediante Pydroid 3.
+
+---
+
+## 2. Objetivo General
+
+Desarrollar un sistema de visión artificial móvil capaz de detectar objetos en tiempo real utilizando modelos de aprendizaje profundo optimizados para dispositivos de bajos recursos.
+
+---
+
+## 3. Objetivos Específicos
+
+- Implementar captura de video en tiempo real usando Kivy.
+- Integrar modelo MobileNet SSD mediante OpenCV DNN.
+- Optimizar rendimiento para dispositivos Android gama baja.
+- Permitir integración con reconocimiento de voz nativo de Android.
+
+---
+
+## 4. Arquitectura del Sistema
+
+Cámara Android  
+↓  
+Procesamiento OpenCV DNN  
+↓  
+Modelo MobileNet SSD  
+↓  
+Visualización en interfaz Kivy  
+
+---
+
+## 5. Tecnologías Utilizadas
+
+- Python 3.13
+- Kivy 2.3.1
+- OpenCV (DNN Module)
+- MobileNet SSD (Caffe)
+- Pyjnius (Android API)
+
+---
+
+## 6. Modelo de Detección
+
+Se utiliza MobileNet SSD entrenado sobre el dataset COCO/VOC para detección de:
+
+- Person
+- Bottle
+- Car
+- Dog
+- Chair
+- TV Monitor
+- Entre otros
+
+El modelo es ligero y adecuado para dispositivos móviles.
+
+---
+
+## 7. Requisitos
+
+Instalar dependencias:
+
+pip install kivy opencv-python numpy pyjnius
+
+---
+
+## 8. Instalación
+
+1. Descargar:
+   - MobileNetSSD_deploy.prototxt
+   - MobileNetSSD_deploy.caffemodel
+
+2. Colocar en la misma carpeta del script principal.
+
+3. Ejecutar:
+
+python smart_vision_android_light.py
+
+---
+
+## 9. Resultados
+
+- Detección en tiempo real a 15 FPS
+- Bajo consumo de memoria
+- Compatible con dispositivos Android de 2GB RAM
+
+---
+
+## 10. Limitaciones
+
+- Dependencia de iluminación adecuada.
+- Precisión limitada frente a modelos más pesados como YOLOv8.
+- No incluye entrenamiento personalizado.
+
+---
+
+## 11. Trabajos Futuros
+
+- Integración con TensorFlow Lite.
+- Implementación de detección personalizada.
+- Implementación de salida de voz automática.
+- Conversión a APK usando Buildozer.
+
+---
+
+## 12. Conclusión
+
+El sistema demuestra la viabilidad de implementar visión artificial en dispositivos móviles de bajo costo utilizando herramientas accesibles y modelos optimizados.
+
+---
+
+## Autor
+
+[Tu Nombre]
+
+Proyecto académico 2026
